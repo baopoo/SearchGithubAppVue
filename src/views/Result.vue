@@ -1,5 +1,5 @@
 <template>
-  <div class="my-3 d-flex justify-content-between align-items-center" @click="onClickSearchRepo()">
+  <div class="github-user-item my-3 d-flex justify-content-between align-items-center" @click="onClickSearchRepo()">
     <div class="d-flex gap-5 align-items-center">
       <img
         :src="user.avatar_url"
@@ -30,12 +30,12 @@ export default {
 }
 </script>
 <style scoped>
-  div:first-child{
+  .github-user-item{
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 8px;
   }
-  div:first-child:hover{
+  .github-user-item:hover{
     background-color: rgb(184, 183, 183)
   }
   img {
