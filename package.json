@@ -1,0 +1,22 @@
+{
+  "name": "vite-js",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.0.9",
+    "vite-plugin-vue2": "^2.0.2",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.7.8",
+    "axios": "^1.4.0",
+    "sweetalert2": "^11.7.6",
+    "vue": "^2.7.10",
+    "vue-router": "^3.6.5",
+    "vuex": "^3.0.1"
+  }
+}
