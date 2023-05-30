@@ -7,7 +7,9 @@
         <commit-item
           v-for="(commit, index) in commits"
           :key="index" :commit="commit" :repo="repo" :owner="name"
-        ></commit-item>
+        >
+        <span><strong>STT</strong>: {{ index + 1 }}</span>
+    </commit-item>
       </div>
     </div>
   </div>

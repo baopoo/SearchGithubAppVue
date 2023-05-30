@@ -4,7 +4,7 @@
     target="_blank"
     class="commit-item border-bottom d-flex flex-column mt-2 py-2 px-2 rounded-2"
   >
-    <span><strong>STT</strong>: {{  }}</span>
+    <slot></slot>
     <span><strong>Name</strong>: {{ commit.commit.author.name }}</span>
     <span><strong>Email</strong>: {{ commit.commit.author.email }}</span>
     <span><strong>Commit ID</strong>: {{ commit.sha }}</span>
