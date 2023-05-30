@@ -1,6 +1,6 @@
 <template>
     <div class="repo-item border-bottom py-3 px-1">
-        <h4>{{this.repo.name}}</h4>
+        <h4 @click="onClickSearchCommit()">{{this.repo.name}}</h4>
         <div class="d-flex gap-5">
             <span>Start number : {{ this.repo.stargazers_count }}</span>
             <span>Issues number : {{ this.repo.open_issues_count }}</span>
@@ -14,6 +14,12 @@ export default {
             type: Object,
             required: true
         }
+    },
+    methods: {
+        onClickSearchCommit(){
+            this.$router.push({path: '/commit', query: {name: this.repo.owner.login, repo: this.repo.name}})
+            this.$store.dispatch('fetchCommit', {owner: this.repo.owner.login, repo: this.repo.name})
+        }
     }
 }
 </script>
@@ -21,8 +27,8 @@ export default {
     h4{
         margin-bottom: 0px;
     }
-  .repo-item:hover{
-    cursor: pointer;
-    background-color: gray;
-  }
+    h4:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 </style>

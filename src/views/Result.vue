@@ -11,7 +11,6 @@
   </div>
 </template>
 <script>
-import { evenBus } from '../main';
 
 export default {
   props: {
@@ -22,10 +21,9 @@ export default {
   },
   methods: {
     onClickSearchRepo(){
+      this.$store.dispatch('fetchUserInfo', this.user)
+      this.$store.dispatch('fetchRepo', this.user.login);
       this.$router.push({path: '/repository', query: {name: this.user.login}});
-      // console.log(this.user);
-      this.$store.dispatch('updateRepoActions', this.user.login);
-      evenBus.$emit('sendUserImg', this.user)
     }
   }
 

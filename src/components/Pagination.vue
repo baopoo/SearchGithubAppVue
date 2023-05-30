@@ -13,7 +13,7 @@ export default {
     },
     computed: {
       totalUser(){
-        return this.$store.state.totalUser
+        return this.$store.getters.getTotalUser;
       }
     },
     methods: {

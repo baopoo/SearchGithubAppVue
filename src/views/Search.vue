@@ -1,7 +1,7 @@
 <template>
   <div class="row col-12 col-md-6 mx-auto mt-4">
-    <app-search-input @searchUser="onClickSearchValue($event)"></app-search-input>
-    <app-search-result :value="value"></app-search-result>
+    <search-input @searchUser="onClickSearchValue($event)"></search-input>
+    <search-result :value="value"></search-result>
   </div>
 </template>
 
@@ -12,8 +12,8 @@ import { evenBus } from '../main'
 
 export default {
   components: {
-    'app-search-input': SearchInput,
-    'app-search-result': SearchResult,
+     SearchInput,
+     SearchResult,
   },
   data() {
     return {
@@ -24,13 +24,13 @@ export default {
   },
   created() {
     evenBus.$on('changePage', (page)=> {
-      this.$store.dispatch('updateUserActions', {value: this.value, page: page})
+      this.$store.dispatch('fetchUser', {value: this.value, page: page})
     })
   },
   methods: {
     onClickSearchValue(value){
       this.value = value;
-      this.$store.dispatch('updateUserActions', {value: this.value, page: this.pageCurrent})
+      this.$store.dispatch('fetchUser', {value: this.value, page: this.pageCurrent})
     }
   },
 }

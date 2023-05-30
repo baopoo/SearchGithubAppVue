@@ -1,5 +1,6 @@
-import Search from '../components/Search.vue'
-import Repos from '../components/Repos.vue'
+import Search from '../views/Search.vue'
+import Repos from '../views/Repos.vue'
+import Commit from '../views/Commit.vue'
 
 export const routes = [
     {
@@ -13,7 +14,12 @@ export const routes = [
         component: Repos,
     },
     {
+        path: '/commit',
+        name: 'commit',
+        component: Commit,
+    },
+    {
         path: '*',
         redirect: 'home'
     }
-  ];
+  ];    
