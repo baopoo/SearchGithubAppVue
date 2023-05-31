@@ -14,8 +14,8 @@
   </div>
 </template>
 <script>
-import RepoItem from "./RepoItem.vue";
 import UserInfor from "../components/UserInfor.vue";
+import RepoItem from '../components/RepoItem.vue';
 
 export default {
   data() {

@@ -16,7 +16,7 @@
 </template>
 <script>
 import UserInfor from "../components/UserInfor.vue";
-import CommitItem from "./CommitItem.vue";
+import CommitItem from "../components/CommitItem.vue";
 
 export default {
   data() {

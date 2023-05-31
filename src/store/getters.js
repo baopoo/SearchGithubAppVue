@@ -13,3 +13,8 @@ export const getUserInfo = (state) => {
 export const getCommits = (state) => {
   return state.commits;
 };
+
+// Gom chung một hàm getters
+export const getDataByNameState = (state) => (nameState) => {
+  return state[nameState];
+}

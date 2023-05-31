@@ -11,7 +11,7 @@ const Commit = () => import('../views/Commit.vue')
 
 export const routes = [
     {
-        path: '/',
+        path: '',
         name: 'home',
         component: Search,
     },

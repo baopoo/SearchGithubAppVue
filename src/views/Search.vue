@@ -6,8 +6,9 @@
 </template>
 
 <script>
-import SearchInput from './SearchInput.vue'
-import SearchResult from './SearchResult.vue'
+import SearchResult from '../components/SearchResult.vue'
+import SearchInput from '../components/SearchInput.vue'
+
 import { evenBus } from '../main'
 
 export default {
